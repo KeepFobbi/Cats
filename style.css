@@ -1,0 +1,196 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f2f4f9;
+}
+
+main{
+    margin: 0 100px 30px 100px;
+    background-color: white;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+#MainHeader{
+    width: 100%;
+    height: 70px;
+    background-color: #121212;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    z-index: 101;
+}
+
+#logo{
+    font-family: 'Bangers', cursive;
+    font-size: 70px;
+    color: #ffffff;
+    text-shadow: -1px -2px 45px #999;
+    margin-left: 200px;
+    margin-right: 1000px;
+}
+
+.MainMenu{
+    font-family: 'Bangers', cursive;
+    font-size: 40px;
+    color: #fff;
+    float: center;
+    margin: 10px;
+}
+
+a.MainMenu:hover{
+    color:#999;
+}
+
+.wrapper {
+    height: 700px;
+    width: 100%;
+	margin: 0px auto;
+	position: relative;	
+}
+
+.slider {
+	background-color: #ddd;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	-o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.wrapper > input {
+	display: none;
+}
+
+.slides {
+	height: inherit;
+	position: absolute;
+	width: inherit;
+}
+
+.slide3 { background-image: url(https://img.fonwall.ru/o/pq/kotyata-serie-malenkie-milie.jpg); background-size: 100%;}
+.slide2 { background-image: url(https://fullhdwallpapers.ru/image/cats/23879/koshka-v-poloske-sveta.jpg); background-size: 100%;}
+.slide1 { background-image: url(https://w-dog.ru/wallpapers/5/19/435723921348903.jpg); background-size: 100%;}
+.slide4 { background-image: url(https://fullhdwallpapers.ru/image/cats/18843/koshka-s-zelenymi-glazami.jpg); background-size: 100%;}
+.slide5 { background-image: url(https://storge.pic2.me/upload/187/5a303c3991295.jpg); background-size: 100%;}
+
+.wrapper .controls {
+	left: 50%;
+	margin-left: -98px;
+	position: absolute;
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.wrapper label:after {
+	border: 2px solid #ddd;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: background ease-in-out .5s;
+	-moz-transition: background ease-in-out .5s;
+	-o-transition: background ease-in-out .5s;
+	transition: background ease-in-out .5s;
+}
+
+.wrapper label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+	background: #ddd;
+}
+
+.slides {
+	height: inherit;
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+	opacity: 1;
+	z-index: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.MainInfo{
+    font-family: 'Do Hyeon', sans-serif;
+    width: 100%;
+    font-size: 24px;
+    padding: 50px;
+}
+
+.Title_Hunter{width: 50%; float: left;}
+.Title_Carnivore{width: 50%; float: right;}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+  }
